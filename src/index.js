@@ -1,21 +1,4 @@
-function sayHello() {
-  return "Hello World";
-}
+let numbers = [1, 2, 3];
+numbers.map((number) => number * 2);
 
-let fn = sayHello;
-fn();
-
-function greet(fnMessage) {
-  console.log(fnMessage());
-}
-
-greet(sayHello);
-
-function sayHelloFn() {
-  return function () {
-    return "Hello World";
-  };
-}
-
-let fnFunc = sayHello();
-let message = fn();
+setTimeout(() => console.log("Hello"), 1000);
