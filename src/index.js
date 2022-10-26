@@ -1,45 +1,12 @@
-const person = {
-  name: "John",
-  address: {
-    country: "USA",
-    city: "San Francisco",
-  },
-};
-const updated = Object.assign({}, person, { name: "Bob", age: 30 });
-// => equal
-const updated = { ...person, name: "Bob" };
+const numbers = [1, 2, 3];
 
-updated.address.city = "New York";
+// Adding
+const added = [...numbers, 4];
+const added = [...numbers.slice(0, index), 4, ...numbers.slice(index)];
 
-/*
-log person =>
+// Remove
+const removed = numbers.filter((n) => n !== 2);
 
-const person = {
-  name: "John",
-  address: {
-    country: "USA",
-    city: "New York",
-  },
-};
-*/
-
-const updated = {
-  ...person,
-  address: {
-    ...person.address,
-    city: "New York",
-  },
-  name: "Bob",
-};
-
-/*
-log person =>
-
-const person = {
-  name: "John",
-  address: {
-    country: "USA",
-    city: "San Francisco",
-  },
-};
-*/
+// Updating
+const updated = numbers.map((n) => (n === 2 ? 20 : n));
+// log updated => [1, 20, 3]
