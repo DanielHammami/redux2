@@ -1,12 +1,7 @@
 import store from './store';
-import * as actions from './actionTypes';
+import { bugAdded } from './actions'
 
-store.dispatch({
-    type: actions.BUG_ADDED,
-    payload: {
-        description: 'bug1'
-    }
-});
+store.dispatch(bugAdded('Bug 1'));
 
 
 console.log(store.getState());
